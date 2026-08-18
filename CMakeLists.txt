@@ -13,6 +13,7 @@ add_executable(
     AkyMonitor
     src/main.cpp
     src/MainWindow.cpp
+    src/CpuMonitor.cpp
 )
 
 target_include_directories(
