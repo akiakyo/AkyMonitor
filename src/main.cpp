@@ -1,16 +1,13 @@
-#include <iostream>
+#include <QApplication>
 
-using namespace std;
+#include "MainWindow.h"
 
-int main()
+int main(int argc, char *argv[])
 {
-    cout << "==========================" << endl;
-    cout << "      AkyMonitor v0.1      " << endl;
-    cout << "==========================" << endl;
+    QApplication app(argc, argv);
 
-    cout << endl;
+    MainWindow window;
+    window.show();
 
-    cout << "System Monitor Starting..." << endl;
-
-    return 0;
+    return app.exec();
 }

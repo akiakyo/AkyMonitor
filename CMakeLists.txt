@@ -5,7 +5,24 @@ project(AkyMonitor)
 set(CMAKE_CXX_STANDARD 23)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
+find_package(Qt6 REQUIRED COMPONENTS Widgets)
+
+qt_standard_project_setup()
+
 add_executable(
     AkyMonitor
     src/main.cpp
+    src/MainWindow.cpp
+)
+
+target_include_directories(
+    AkyMonitor
+    PRIVATE
+    include
+)
+
+target_link_libraries(
+    AkyMonitor
+    PRIVATE
+    Qt6::Widgets
 )
